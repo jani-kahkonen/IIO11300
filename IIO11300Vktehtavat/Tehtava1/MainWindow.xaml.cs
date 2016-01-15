@@ -21,23 +21,25 @@ using System.Windows.Shapes;
 
 namespace Tehtava1
 {
-  /// <summary>
-  /// Interaction logic for MainWindow.xaml
-  /// </summary>
-  public partial class MainWindow : Window
-  {
-    public MainWindow()
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
     {
-      InitializeComponent();
-    }
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
 
         private void btnCalculate_Click(object sender, RoutedEventArgs e)
         {
+            double resultWndArea = 0, resultFrmArea = 0, resultFrmPerimeter = 0;
             //TODO
             try
             {
-                double result;
-                result = BusinessLogicWindow.CalculatePerimeter(1, 1);
+                resultWndArea = BusinessLogicWindow.CalculateArea(Convert.ToDouble(txtWidht.Text), Convert.ToDouble(txtHeight.Text));
+                resultFrmPerimeter = BusinessLogicWindow.CalculatePerimeter(Convert.ToDouble(txtWidht.Text), Convert.ToDouble(txtHeight.Text));
+                resultFrmArea = BusinessLogicWindow.CalculateArea(Convert.ToDouble(txtFrmWidth.Text), resultFrmPerimeter);
             }
             catch (Exception ex)
             {
@@ -47,22 +49,29 @@ namespace Tehtava1
             {
                 //yield to an user that everything okay
             }
+            txtResultWndArea.Text = resultWndArea.ToString();
+            txtResultFrmArea.Text = resultFrmArea.ToString();
+            txtResultFrmPerimeter.Text = resultFrmPerimeter.ToString();
         }
 
-    private void btnClose_Click(object sender, RoutedEventArgs e)
-    {
-
-    }
-  }
-
-  public class BusinessLogicWindow
-    {
-    /// <summary>
-    /// CalculatePerimeter calculates the perimeter of a window
-    /// </summary>
-    public static double CalculatePerimeter(double widht, double height)
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+
+        }
+    }
+
+    public class BusinessLogicWindow
+    {
+        /// <summary>
+        /// CalculatePerimeter calculates the perimeter of a window
+        /// </summary>
+        public static double CalculatePerimeter(double widht, double height)
+        {
+            return widht * 2 + height * 2;
+        }
+        public static double CalculateArea(double widht, double height)
+        {
+            return widht * height;
         }
     }
 }
