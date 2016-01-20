@@ -58,6 +58,30 @@ namespace Tehtava1
         {
 
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Lasketaan pinta-ala ikkuna-olion avulla
+                // Luodaan luokasta olio
+                JAMK.IT.IIO11300.Ikkuna ikkuna = new JAMK.IT.IIO11300.Ikkuna();
+                ikkuna.Korkeus = double.Parse(txtHeight.Text);
+                ikkuna.Leveys = double.Parse(txtWidht.Text);
+
+                // Tulos käyttäjälle
+                // VE metodilla
+                // MessageBox.Show(ikkuna.LaskePintaala().ToString());
+
+                // VE property
+                MessageBox.Show(ikkuna.PintaAla.ToString());
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 
     public class BusinessLogicWindow

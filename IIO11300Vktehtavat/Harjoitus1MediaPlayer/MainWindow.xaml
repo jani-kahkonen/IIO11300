@@ -9,6 +9,8 @@
     <Grid>
         <Button x:Name="btnPlay" Content="Soita rokkia" HorizontalAlignment="Left" Margin="98,48,0,0" VerticalAlignment="Top" Width="75" Click="btnPlay_Click"/>
         <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="192" Margin="186,48,0,0" VerticalAlignment="Top" Width="266" LoadedBehavior="Manual"/>
+        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="98,86,0,0" VerticalAlignment="Top" Width="75" Click="btnPause_Click"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="98,126,0,0" VerticalAlignment="Top" Width="75" Click="btnStop_Click"/>
 
     </Grid>
 </Window>
