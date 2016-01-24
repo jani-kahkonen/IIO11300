@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tehtava2"
         mc:Ignorable="d"
-        Title="This could be your lucky day" Height="325" Width="275">
+        Title="This could be your lucky day" Height="350" Width="275">
     <Grid>
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
