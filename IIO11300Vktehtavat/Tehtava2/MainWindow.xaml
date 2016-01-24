@@ -1,0 +1,34 @@
+﻿<Window x:Class="Tehtava2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava2"
+        mc:Ignorable="d"
+        Title="This could be your lucky day" Height="325" Width="275">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock x:Name="tbWidht" Text="Choose the game:" Height="28" Margin="10,10,10,0" />
+                <ComboBox x:Name="comboBox" Width="114" Margin="10,10,10,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock x:Name="tbCount" Text="Number of drawns:" Height="28" Margin="10,10,10,0" />
+                <TextBox x:Name="txtCount" Text="1" Height="28" Width="114" Margin="10,10,10,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="bttDraw" Content="Draw" Height="28" Width="114" Margin="10,10,10,0" Click="bttDraw_Click" />
+                <Button x:Name="bttClear" Content="Clear" Height="28" Width="114" Margin="10,10,10,0" Click="bttClear_Click" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock x:Name="tbinfo" Text="Randomly drawn numbers:" Height="28" Margin="10,10,10,0" />
+            </StackPanel>
+            <StackPanel>
+                <TextBox x:Name="txtContainer" Height="100" Width="250"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="bttClose" Content="Close" Height="28" Width="114" Margin="10,10,10,0" Click="bttClose_Click" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
