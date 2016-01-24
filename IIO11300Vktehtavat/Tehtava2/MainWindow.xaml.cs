@@ -39,35 +39,42 @@ namespace Tehtava2
         {
             try
             {
-                Tehtava2.Lotto lotto = new Tehtava2.Lotto();
-
                 // Arvottavien rivien lukumäärä.
                 int count = int.Parse(txtCount.Text);
 
-                // Pelin valinta
+                Tehtava2.Lotto[] lotto = new Tehtava2.Lotto[count];
 
-                if (this.comboBox.SelectedIndex == 0)
+                for (int i = 0; i < count; ++i)
                 {
-                    lotto.Lenght = 7;
-                    lotto.Max = 39;
-                }
-                else if (this.comboBox.SelectedIndex == 1)
-                {
-                    lotto.Lenght = 6;
-                    lotto.Max = 48;
-                }
-                else if (this.comboBox.SelectedIndex == 2)
-                {
-                    lotto.Lenght = 5;
-                    lotto.Max = 50;
-                    lotto.Ext = true;
+                    lotto[i] = new Lotto();
+
+                    // Pelin valinta
+
+                    if (this.comboBox.SelectedIndex == 0)
+                    {
+                        lotto[i].Lenght = 7;
+                        lotto[i].Max = 39;
+                        lotto[i].Ext = false;
+                    }
+                    else if (this.comboBox.SelectedIndex == 1)
+                    {
+                        lotto[i].Lenght = 6;
+                        lotto[i].Max = 48;
+                        lotto[i].Ext = false;
+                    }
+                    else if (this.comboBox.SelectedIndex == 2)
+                    {
+                        lotto[i].Lenght = 5;
+                        lotto[i].Max = 50;
+                        lotto[i].Ext = true;
+                    }
                 }
 
                 // Tee rivit
 
                 for(int i = 0; i < count; ++i)
                 {
-                    txtContainer.Text += lotto.CreateLotto();
+                    txtContainer.Text += lotto[i].CreateLotto() + "\n";
                 }
             }
             catch (Exception ex)

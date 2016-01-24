@@ -56,18 +56,20 @@ namespace Tehtava2
 
                 numbers += " -";
                 this.CreateLotto();
+
+                lenght = 0;
             }
 
-            return numbers += "\n";
+            return numbers;
         }
 
         public void random(int[] arr)
         {
-            Random rnd = new Random();
+            Random rnd = new Random(DateTime.Now.Millisecond);
 
             for (int i = 0; i < lenght; ++i)
             {
-                arr[i] = rnd.Next(1, max);
+                arr[i] = rnd.Next(1, max + 1);
             }
         }
 
