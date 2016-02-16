@@ -1,0 +1,57 @@
+﻿<Window x:Class="Tehtava4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava4"
+        mc:Ignorable="d"
+        Title="Oudot oliot" Height="280" Width="550">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Margin="10, 10, 10, 10">
+                    <StackPanel Orientation="Vertical" Margin="10, 10, 10, 10">
+                        <TextBlock Height="20" Text="Etunimi:"/>
+                        <TextBlock Height="20" Text="Sukunimi:"/>
+                        <TextBlock Height="20" Text="Siirtohinta:"/>
+                        <TextBlock Height="20" Text="Seura:"/>
+                        <TextBlock Height="20" Text="Kuva:"/>
+                        <TextBlock Height="20" Text="Tiedoston nimi:"/>
+                        <TextBlock Height="20" Text="Haettava tiedosto:"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10, 10, 10, 10">
+                        <TextBox x:Name="txtFirstName" Width="75" Height="20" Text=""/>
+                        <TextBox x:Name="txtLastName" Width="75" Height="20" Text=""/>
+                        <TextBox x:Name="txtCost" Width="75" Height="20" Text=""/>
+                        <ComboBox x:Name="cbbSeura" Loaded="cbbSeura_Loaded" />
+                        <TextBox x:Name="txtImage" Width="75" Height="20" Text="" />
+                        <TextBox x:Name="txtSerialization" Width="75" Height="20" Text="tiedosto.dat"/>
+                        <TextBox x:Name="txtDeserialization" Width="75" Height="20" Text="tiedosto.dat"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10, 10, 10, 10">
+                        <Button x:Name="btnNew" Content="Uusi pelaaja" Click="btnNew_Click" />
+                        <Button x:Name="btnSave" Content="Talleta pelaaja" Click="btnSave_Click" />
+                        <Button x:Name="btnDelete" Content="Poista pelaaja" Click="btnDelete_Click" />
+                        <Button x:Name="btnWrite" Content="Kirjoita pelaajat" Click="btnWrite_Click" />
+                        <Button x:Name="btnExit" Content="Lopetus" Click="btnExit_Click" />
+                        <Button x:Name="btnSerializeBin" Content="Serialisoi Bin" Click="btnSerializeBin_Click" />
+                        <Button x:Name="btnDeserializeBin" Content="Deserialisoi Bin" Click="btnDeserializeBin_Click" />
+                        <Button x:Name="btnSerializeXml" Content="Serialisoi Xml" Click="btnSerializeXml_Click" />
+                        <Button x:Name="btnDeserializeXml" Content="Deserialisoi Xml" Click="btnDeserializeXml_Click" />
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10, 10, 10, 10">
+                        <ListBox Name="lbPlayers" Width="150" Height="140" MouseDoubleClick="lbPlayers_MouseDoubleClick"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10, 10, 10, 10">
+                        <Image Name="media" Width="100" Height="100" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="10, 0, 10, 10">
+                <StatusBar>
+                    <TextBlock Name="status" />
+                </StatusBar>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
