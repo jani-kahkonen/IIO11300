@@ -1,0 +1,43 @@
+﻿<Window x:Class="Tehtava6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava6"
+        mc:Ignorable="d"
+        Title="XML Viinikellari" Height="400" Width="500" FontSize="14">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="Red" Offset="0.0"/>
+                <GradientStop Color="Black" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <StackPanel Margin="10">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Button x:Name="bttLoad" Content="Hae viinit" Width="150" Click="bttLoad_Click" />
+                <ComboBox x:Name="cbbMaa" Width="150" SelectionChanged="cbbMaa_SelectionChanged" Margin="170, 0, 0, 0" />
+            </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <ListView Name="lvUsers" Height="280">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Nimi" Width="200" DisplayMemberBinding="{Binding Nimi}" />
+                        <GridViewColumn Header="Arvio" Width="60" DisplayMemberBinding="{Binding Arvio}" />
+                        <GridViewColumn Header="Maa" Width="200" DisplayMemberBinding="{Binding Maa}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
+            <StatusBar Width="470" Height="20">
+                <TextBlock Name="status" />
+            </StatusBar>
+        </StackPanel>
+        
+    </StackPanel>
+    </Grid>
+</Window>
