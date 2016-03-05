@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H5MoviesXML", "H5MoviesXML\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava6", "Tehtava6\Tehtava6.csproj", "{442D059B-10CA-4856-A510-90B9518BB919}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava7", "Tehtava7\Tehtava7.csproj", "{2488FC6C-603D-47E1-80B0-AB166F39B022}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{442D059B-10CA-4856-A510-90B9518BB919}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{442D059B-10CA-4856-A510-90B9518BB919}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{442D059B-10CA-4856-A510-90B9518BB919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2488FC6C-603D-47E1-80B0-AB166F39B022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2488FC6C-603D-47E1-80B0-AB166F39B022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2488FC6C-603D-47E1-80B0-AB166F39B022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2488FC6C-603D-47E1-80B0-AB166F39B022}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
