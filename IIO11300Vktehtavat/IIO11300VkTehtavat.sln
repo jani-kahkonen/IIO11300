@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava6", "Tehtava6\Tehtav
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava7", "Tehtava7\Tehtava7.csproj", "{2488FC6C-603D-47E1-80B0-AB166F39B022}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H8ADONETLasnaolotWPF", "H8ADONETLasnaolotWPF\H8ADONETLasnaolotWPF.csproj", "{904FCF5D-8665-4901-9135-D131264DE6E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H6DataBinding", "H6DataBinding\H6DataBinding.csproj", "{E7C34D46-3B67-44DC-B846-6DE9780268C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{2488FC6C-603D-47E1-80B0-AB166F39B022}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2488FC6C-603D-47E1-80B0-AB166F39B022}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2488FC6C-603D-47E1-80B0-AB166F39B022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{904FCF5D-8665-4901-9135-D131264DE6E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{904FCF5D-8665-4901-9135-D131264DE6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{904FCF5D-8665-4901-9135-D131264DE6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{904FCF5D-8665-4901-9135-D131264DE6E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7C34D46-3B67-44DC-B846-6DE9780268C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7C34D46-3B67-44DC-B846-6DE9780268C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7C34D46-3B67-44DC-B846-6DE9780268C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7C34D46-3B67-44DC-B846-6DE9780268C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
