@@ -1,0 +1,30 @@
+﻿<Window x:Class="Tehtava8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava8"
+        mc:Ignorable="d"
+        Title="ViiniAsiakkaat" Height="350" Width="350">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            
+            <StackPanel Margin="10" Orientation="Vertical">
+                <Button x:Name="bttSearch" Content="Hae" Height="25" Click="bttSearch_Click" />
+                <ListBox x:Name="lbAsiakkaat" Width="150" Height="275" DisplayMemberPath = "lastname" SelectionChanged="lbAsiakkaat_SelectionChanged" />
+            </StackPanel>
+            
+            <StackPanel x:Name="spRight" Margin="10" Orientation="Vertical" Width="150">
+                <TextBlock Text="Etunimi:"/>
+                <TextBox x:Name="txtFname" Text="{Binding Path=Fname, Mode=OneWay}" Background="Coral" FontWeight="Bold" FontSize="16" />
+                <TextBlock Text="Sukunimi:"/>
+                <TextBox x:Name="txtLname" Text="{Binding Path=Lname}" Background="Coral" FontWeight="Bold" FontSize="16" />
+                <TextBlock Text="Osoite:"/>
+                <TextBox x:Name="txtAddress" Text="{Binding Path=Address}" Background="Coral" FontWeight="Bold" FontSize="16" />
+                <TextBlock Text="Kaupunki:"/>
+                <TextBox x:Name="txtCity" Text="{Binding Path=City}" Background="Coral" FontWeight="Bold" FontSize="16" />
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Window>
