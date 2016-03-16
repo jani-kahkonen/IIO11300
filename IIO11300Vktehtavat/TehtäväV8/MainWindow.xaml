@@ -1,0 +1,31 @@
+﻿<Window x:Class="TehtäväV8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TehtäväV8"
+        mc:Ignorable="d"
+        Title="ViiniAsiakkaat" Height="350" Width="350">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <StackPanel x:Name="spList" Margin="5">
+                <Button x:Name="btnGetData" Content="Hae asiakkaat" Click="btnGetData_Click" />
+                <ComboBox x:Name="cbCities" ItemsSource="{Binding}" SelectionChanged="cbCities_SelectionChanged" />
+                <ListBox x:Name="lbCustomers" ItemsSource="{Binding}" Width="150" Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="lbCustomers_SelectionChanged" />
+            </StackPanel>
+            <StackPanel x:Name="spCustomer" Margin="5">
+                <TextBlock>Etunimi: </TextBlock>
+                <TextBox Text="{Binding Path=Firstname}" Width="150" />
+
+                <TextBlock>Sukunimi:</TextBlock>
+                <TextBox Text="{Binding Path=Lastname}" Width="150" />
+
+                <TextBlock>Osoite:</TextBlock>
+                <TextBox Text="{Binding Path=Address}" Width="150" />
+
+                <TextBlock>Kaupunki:</TextBlock>
+                <TextBox Text="{Binding Path=City}" Width="150" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
