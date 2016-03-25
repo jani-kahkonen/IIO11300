@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava8", "Tehtava8\Tehtav
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TehtäväV8", "TehtäväV8\TehtäväV8.csproj", "{BF28AE20-A561-4FE5-9963-B03CFE26B3A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava9", "Tehtava9\Tehtava9.csproj", "{4B98DA6C-F4D4-4456-B55F-178F14F43049}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{BF28AE20-A561-4FE5-9963-B03CFE26B3A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF28AE20-A561-4FE5-9963-B03CFE26B3A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF28AE20-A561-4FE5-9963-B03CFE26B3A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B98DA6C-F4D4-4456-B55F-178F14F43049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B98DA6C-F4D4-4456-B55F-178F14F43049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B98DA6C-F4D4-4456-B55F-178F14F43049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B98DA6C-F4D4-4456-B55F-178F14F43049}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

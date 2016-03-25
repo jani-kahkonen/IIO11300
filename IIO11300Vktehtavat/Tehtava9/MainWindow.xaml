@@ -1,0 +1,22 @@
+﻿<Window x:Class="Tehtava9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="525">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Button x:Name="bttSearch" Content="Hae asiakkaat" Height="25" Click="bttSearch_Click" />
+            
+            
+            <Button x:Name="bttNew" Content="Tee uusi" Height="25" Click="bttNew_Click"/>
+            <StackPanel x:Name="myStackpanel" Orientation="Horizontal" />
+
+            <Button x:Name="bttDelete" Content="Poista valittu" Height="25" Click="bttDelete_Click" />
+            <Button x:Name="bttSave" Content="Tallenna muutokset" Height="25" />
+            <DataGrid x:Name="grdAsiakkaat" Margin="5" ItemsSource="{Binding}" Height="200" />
+        </StackPanel>
+    </Grid>
+</Window>
