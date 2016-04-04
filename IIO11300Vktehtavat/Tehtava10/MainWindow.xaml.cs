@@ -21,47 +21,50 @@ namespace Tehtava10
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
-        public OleDbConnection oleCon;
-        public OleDbCommand oleComd;
+        private List<Book> books;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            BindData();
+            InitMyStuff();
         }
 
-        public void BindData()
+        private void InitMyStuff()
         {
-
-            oleCon = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Jani\Documents\Visual Studio 2015\Projects\IIO11300\IIO11300Vktehtavat\Tehtava10\SMLiiga.accdb");
-
-            oleComd = new OleDbCommand("SELECT * FROM Pelaajat", oleCon);
-
-            DataSet dtst = new DataSet();
-
-            OleDbDataAdapter adpt = new OleDbDataAdapter();
-
             try
             {
-                oleCon.Open();
+                books = BLPlayer.GetBooks(true);
 
-                adpt.SelectCommand = oleComd;
-
-                adpt.Fill(dtst, "Pelaajat");
-
-                lstPlayer.DataContext = dtst;
-
+                lstBooks.DataContext = books;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
+        }
+
+        private void dgBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            spBook.DataContext = lstBooks.SelectedItem;
+        }
+
+        private void btnWrite_Click(object sender, RoutedEventArgs e)
+        {
+            try
             {
-                oleCon.Close();
+                Book current = (Book)spBook.DataContext;
+
+                BLPlayer.UpdateBook(current);
+
+                MessageBox.Show(string.Format("Kirja {0} päivitetty kantaan onnistuneesti", current.ToString()));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

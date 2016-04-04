@@ -5,43 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tehtava10"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="525">
+        Title="Tehtava10" Width="525" Height="300" >
     <Grid>
-        <StackPanel>
-            <StackPanel Orientation="Vertical">
-                <StackPanel Orientation="Horizontal" Margin="10, 10, 10, 10">
-                    <StackPanel Orientation="Vertical" Margin="10, 10, 10, 10">
-                        <TextBlock Height="20" Text="Etunimi:"/>
-                        <TextBlock Height="20" Text="Sukunimi:"/>
-                        <TextBlock Height="20" Text="Siirtohinta:"/>
-                        <TextBlock Height="20" Text="Seura:"/>
+        <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" LastChildFill="True" >
+
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+
+                <StackPanel Name="spBook" Orientation="Horizontal" Margin="5">
+                    <StackPanel>
+                        <TextBlock>FName: </TextBlock>
+                        <TextBlock>LName:</TextBlock>
+                        <TextBlock>Price:</TextBlock>
+                        <TextBlock>Group:</TextBlock>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" Margin="10, 10, 10, 10">
-                        <TextBox x:Name="txtFirstName" Width="75" Height="20" Text="{Binding Path=etunimi, UpdateSourceTrigger=PropertyChanged}" />
-                        <TextBox x:Name="txtLastName" Width="75" Height="20" Text="{Binding Path=sukunimi, UpdateSourceTrigger=PropertyChanged}" />
-                        <TextBox x:Name="txtCost" Width="75" Height="20" Text="{Binding Path=arvo, UpdateSourceTrigger=PropertyChanged}" />
-                        <ComboBox x:Name="cbbSeura" ItemsSource="{Binding}" />
+                    <StackPanel Width="100">
+                        <TextBox Name="txtFName" Text="{Binding Path=FName, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Name="txtLName" Text="{Binding Path=LName, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Name="txtPrice" Text="{Binding Path=Price, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Name="txtGroup" Text="{Binding Path=Group, UpdateSourceTrigger=PropertyChanged}"/>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" Margin="10, 10, 10, 10">
-                        <Button x:Name="btnNew" Content="Uusi pelaaja" />
-                        <Button x:Name="btnSave" Content="Talleta pelaaja" />
-                        <Button x:Name="btnDelete" Content="Poista pelaaja" />
-                        <Button x:Name="btnWrite" Content="Tallenna kantaan" />
-                        <Button x:Name="btnExit" Content="Lopetus" Click="btnExit_Click" />
-                    </StackPanel>
-                    <ListBox Width="200" Height="175" Margin="10" ItemsSource="{Binding Path=Pelaajat}" Name="lstPlayer">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding Path=etunimi}" />
-                                    <TextBlock Text="{Binding Path=sukunimi}" />
-                                    <TextBlock Text="{Binding Path=seura}" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
                 </StackPanel>
+
+                <StackPanel Margin="5">
+                    <Button x:Name="btnWrite" Content="Tallenna kantaan" Click="btnWrite_Click" />
+                    <Button x:Name="btnExit" Content="Lopetus" Click="btnExit_Click" />
+                </StackPanel>
+
+                <ListBox Margin="5" Width="250" Name="lstBooks" ItemsSource="{Binding}" SelectionChanged="dgBooks_SelectionChanged"/>
+                
             </StackPanel>
-        </StackPanel>
+        </DockPanel>
     </Grid>
 </Window>
