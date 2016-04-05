@@ -8,7 +8,6 @@
         Title="Tehtava11" Height="275" Width="475">
     <Grid>
         <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" LastChildFill="True">
-
             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
 
                 <StackPanel Name="spBook" Margin="5" Width="125" Orientation="Horizontal" Background="LightBlue">
